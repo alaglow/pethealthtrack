@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background: grey;
+    justify-content: center;
+}
+
+.navigation-panel {
+    background: white;
+    margin-right: auto;
+    width: 300px;
+}
+
+.navigation-panel-header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.navigation-panel-links {
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.human-profile{
+    display: flex;
+    width: 200px;
+    height: auto;
+    justify-content: center;
+}
+
+.animal-panel {
+    background: white;
+    margin-left: auto;
+    width: 300px;
+}
+
+.animal-panel-img {
+    width: 200px;
+    height: auto;
+    justify-content: center;
+}
+
+.animal-panel-header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.middle-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.welcome-header {
+    display: flex;
+    margin-bottom: auto;
+    background-color: white;
+    width: 450px;
+}
+
+.welcome-text {
+    justify-content: center;
+}
+
+.container {
+    margin-top: auto;
+    width: 450px;
+    height: 230px;
+    background-color: white;
+}
+
+.calendar {
+    padding: 10px;
+}
+
+
+.header {
+    width: 380px;
+    display: flex;
+    align-items: left;
+    padding: 5px;
+    font-size: smaller;
+
+}
+
+.header button {
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.days {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(7, 30px);
+    font-size: smaller;
+    ;
+}
+
+.day {
+    text-align: center;
+    padding: 5px;
+    font-size: smaller;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 20px);
+    gap: 10px;
+    font-size: smaller;
+
+}
+
+.date.inactive {
+    color: grey;
+}
+
+.date:hover,
+.date.active {
+    background: #e96666;
+    border-radius: 60%;
+}
+
+.date-events {
+    position: relative;
+    bottom: 220px;
+    left: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.events {
+    position: relative;
+    right: 40px;
+    padding: 10px;
+    font-size: smaller;
+}
+
+.add-event-wrapper {
+    padding: 10px;
+}
+
+.add-event-body {
+    padding: 20px;
+}
+
+.create-container {
+    position: relative;
+    width: 20px;
+    bottom: 40px;
+    left: 400px;
+}
+
+.add-event-container {
+    overflow: hidden;
+    position: relative;
+    bottom: 0px;
+    max-height: 0px;
+}
+
+.add-event-container.active {
+    max-height: 300px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Kalendarz
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/styleAnimalPanel.css">
+</head>
+
+<body>
+
+    <div class="navigation-panel">
+        <h2 class="navigation-panel-header">Navigation Panel</h2>
+        <img class="human-profile" src="images/humanProfile.jpeg">
+        <nav class="navigation-panel-links">
+            <ul>
+                <li><a class="nav-pan-links" href="index.html">Home</a></li>
+                <li><a class="nav-pan-links" href="#">Dieta</a></li>
+                <li><a class="nav-pan-links" href="#">Weterynarz</a></li>
+                <li><a class="nav-pan-links" href="#">Treningi i zabawy</a></li>
+                <li><a class="nav-pan-links" href="#">Zachowanie</a></li>
+                <li><a class="nav-pan-links" href="#">Kalendarz</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+    <div class="middle-container">
+        <div class="welcome-header">
+            <h2 class="welcome-text">Hello, owner + pet</h2>
+        </div>
+        <div class="container">
+            <div class="calendar">
+                <div class="header">
+                    <button id="prevBtn"><</button>
+                            <div class="monthYear" id="monthYear"></div>
+                            <button id="nextBtn">></button>
+                </div>
+                <div class="days">
+                    <div class="day">Pon</div>
+                    <div class="day">Wt</div>
+                    <div class="day">Śr</div>
+                    <div class="day">Czw</div>
+                    <div class="day">Pt</div>
+                    <div class="day">Sob</div>
+                    <div class="day">Ndz</div>
+                </div>
+                <div class="dates" id="dates"></div>
+            </div>
+            <div class="date-events">
+                <div class="today-date">
+                    <div class="event-day"></div>
+                    <div class="event-date"></div>
+                </div>
+                <div class="events">
+                    <label for="event-name">Wydarzenie:</label>
+                    <p id="event-name-par"></p>
+                    <label for="event-time">Godzina:</label>
+                    <p id="event-time-par"></p>
+
+                </div>
+                <div class="add-event-container">
+                    <div class="add-event-header">
+                        <div class="title">Dodaj wydarzenie</div>
+                    </div>
+                    <div class="add-event-body">
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Nazwa wydarzenia" class="event-name">
+                        </div>
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Godzina" class="event-time">
+                        </div>
+                    </div>
+                    <div class="add-event-button">
+                        <button class="add-btn">Dodaj</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="create-container"> + </button>
+    </div>
+    <div class="animal-panel">
+        <h2 class="animal-panel-header">Animal Panel</h2>
+        <img class="animal-panel-img" src="images/animalPanel_dog.jpeg">
+    </div>
+    <script src="js/scriptAnimalPanel.js"></script>
+
+</body>
+
+</html>
