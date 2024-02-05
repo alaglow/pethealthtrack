@@ -7,20 +7,20 @@ The design of a website and, in the future, an application that will be dedicate
 The project consists of major tasks, and the TODO list provides an initial outline of these major tasks."
 
 
-[x]ToDo for the calendar
-[x]Login panel
-[]CSS - Website responsiveness
-[]Calendar
-[]Notes panel
-[]Account creation panel
-[]Diet panel
-[]Veterinary panel 
-[]Training panel
-[]Behavior panel
-[]Animal Panel
-[]Ability to add photos
-[]Gallery
-[]Messages Panel
-[]Page based on the project 
-[]Pet panel based on the project
-[]"About us" and "Contact" tabs 
+-[x]ToDo for the calendar
+-[x]Login panel
+-[]CSS - Website responsiveness
+-[]Calendar
+-[]Notes panel
+-[]Account creation panel
+-[]Diet panel
+-[]Veterinary panel 
+-[]Training panel
+-[]Behavior panel
+-[]Animal Panel
+-[]Ability to add photos
+-[]Gallery
+-[]Messages Panel
+-[]Page based on the project 
+-[]Pet panel based on the project
+-[]"About us" and "Contact" tabs 
