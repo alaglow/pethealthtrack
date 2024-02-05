@@ -76,14 +76,20 @@ updateCalendar();
 
 
 const createContainerBtn = document.querySelector(".create-container");
+const closeContainerBtn = document.getElementById("close-event-button");
 addEventContainer = document.querySelector(".add-event-container");
 addEventTitle = document.querySelector(".event-name");
 addEventTime = document.querySelector(".event-time");
 
 
 createContainerBtn.addEventListener('click', function () {
-    addEventContainer.classList.toggle('active');
+    addEventContainer.classList.add('active');
 });
+
+closeContainerBtn.addEventListener('click', function () {
+    addEventContainer.classList.remove('active');
+});
+
 
 addEventTitle.addEventListener('input', function (e) {
     addEventTitle.value = addEventTitle.value.slice(0, 50);
@@ -123,6 +129,8 @@ addBtn.addEventListener('click', function() {
 
 let actualDate = currentDate.toLocaleString('default', { day: 'numeric', month: 'long' })
 eventDate.textContent = actualDate;
+
+
 
 //podzielić na części 
 //dodać konkretne wydarzenie do konkretnego dnia

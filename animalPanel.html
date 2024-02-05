@@ -2,48 +2,64 @@
 <html>
 
 <head>
+    <meta name="view-transition" content="same-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>
-        Kalendarz
+        Panel Zwierzaka
     </title>
-    <link rel="stylesheet" type="text/css" href="css/styleAnimalPanel.css">
+    <link rel="stylesheet" type="text/css" href="css/styleAnimalPanel-left.css">
+    <link rel="stylesheet" type="text/css" href="css/styleAnimalPanel-middle.css">
+    <link rel="stylesheet" type="text/css" href="css/styleAnimalPanel-right.css">
 </head>
 
 <body>
 
-    <div class="navigation-panel">
-        <h2 class="navigation-panel-header">Navigation Panel</h2>
-        <img class="human-profile" src="images/humanProfile.jpeg">
+    <div class="left-panel">
+
+        <img class="logo" src="images/Logo.png">
         <nav class="navigation-panel-links">
-            <ul>
-                <li><a class="nav-pan-links" href="index.html">Home</a></li>
-                <li><a class="nav-pan-links" href="#">Dieta</a></li>
-                <li><a class="nav-pan-links" href="#">Weterynarz</a></li>
-                <li><a class="nav-pan-links" href="#">Treningi i zabawy</a></li>
-                <li><a class="nav-pan-links" href="#">Zachowanie</a></li>
-                <li><a class="nav-pan-links" href="#">Kalendarz</a></li>
+            <ul class="ul-panel-links">
+                <li class="active">
+                    <a class="nav-pan-links" href="animalPanel.html" aria-current="page">PANEL GŁÓWNY</a>
+                </li>
+                <li>
+                    <a class="nav-pan-links" href="calendar.html">KALENDARZ</a>
+                </li>
+                <li>
+                    <a class="nav-pan-links" href="gallery.html">GALERIA</a>
+                </li>
+                <li>
+                    <a class="nav-pan-links" href="messages.html">WIADOMOŚCI</a>
+                </li>
+                <li>
+                    <a class="nav-pan-links" href="settings.html">USTAWIENIA</a>
+                </li>
             </ul>
         </nav>
+        <a class="nav-pan-log-out" href="#">WYLOGUJ SIĘ</a>
     </div>
-    </div>
-    <div class="middle-container">
+    <div class="middle-panel">
         <div class="welcome-header">
             <h2 class="welcome-text">Hello, owner + pet</h2>
         </div>
         <div class="container">
             <div class="calendar">
                 <div class="header">
-                    <button id="prevBtn"><</button>
-                            <div class="monthYear" id="monthYear"></div>
-                            <button id="nextBtn">></button>
+                    <button id="prevBtn">&lt</button>
+                    <div class="monthYear" id="monthYear"></div>
+                    <button id="nextBtn">&gt</button>
                 </div>
                 <div class="days">
-                    <div class="day">Pon</div>
-                    <div class="day">Wt</div>
-                    <div class="day">Śr</div>
-                    <div class="day">Czw</div>
-                    <div class="day">Pt</div>
-                    <div class="day">Sob</div>
-                    <div class="day">Ndz</div>
+                    <div class="day">P</div>
+                    <div class="day">W</div>
+                    <div class="day">Ś</div>
+                    <div class="day">C</div>
+                    <div class="day">P</div>
+                    <div class="day">S</div>
+                    <div class="day">N</div>
                 </div>
                 <div class="dates" id="dates"></div>
             </div>
@@ -53,7 +69,7 @@
                     <div class="event-date"></div>
                 </div>
                 <div class="events">
-                    <label for="event-name">Wydarzenie:</label>
+                    <label for="event-name-par">Wydarzenie:</label>
                     <p id="event-name-par"></p>
                     <label for="event-time">Godzina:</label>
                     <p id="event-time-par"></p>
@@ -74,16 +90,96 @@
                     <div class="add-event-button">
                         <button class="add-btn">Dodaj</button>
                     </div>
+                    <div id="close-event-button">
+                        <button class="add-btn">X</button>
+                    </div>
                 </div>
             </div>
+            <button class="create-container"> + </button>
         </div>
-        <button class="create-container"> + </button>
+        <div class="diet-panel"> Dieta
+        </div>
+        <div class="to-do-panel-container" id="to-do-panel-container">
+            <button class="openBtn" id="openBtn">+</button>
+            <div id="to-do-header">Lista rzeczy do zrobienia</div>
+            <ul id="shorter-list" class="list-todo">
+
+            </ul>
+            <div class="pop-up" id="pop-up">
+                <div class="to-do-open">
+                    <div id="longer-todo-header">LISTA RZECZY DO ZROBIENIA</div>
+                    <div id="todoList"  class="list-todo">
+
+                    </div>
+                    <div class="todo-bottom-part">
+                        <div id="input-el">
+                            <div id="input-inside">
+                                <button id="input-el-btn"> + DODAJ ZADANIE</button>
+                                <input type="text" id="input-box" placeholder="Wpisz treść notatki">
+                                <button id="input-close-btn">X</button>
+                            </div>
+                        </div>
+                        <button id="task-btn" onclick="taskButton()"> + DODAJ ZADANIE</button>
+                    </div>
+                    <button class="closeBtn" id="closeBtn">X</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="mood-panel">Dzisiejszy nastrój zwierzaka
+            <button class = "moods-btn">
+                <img class="moods-img" src="images/minka1.png">
+            </button>
+            <button class = "moods-btn">
+                <img class="moods-img" src="images/minka2.png">
+            </button>
+            <button class = "moods-btn">
+                <img class="moods-img" src="images/minka3.png">
+            </button>
+            <button class = "moods-btn">
+                <img class="moods-img" src="images/minka4.png">
+            </button>
+            <button class = "moods-btn">
+                <img class="moods-img" src="images/minka5.png">
+            </button>
+        </div>
+        <div class="photo-panel-first"> Dodaj zdjęcie 1
+        </div>
+        <div class="photo-panel-second"> Dodaj zdjęcie 2
+        </div>
+        <div class="training-panel"> Spacer
+        </div>
+        <div class="supplements-panel"> Suplementy
+        </div>
+        <div class="medicines-panel"> Przyjmowane Leki
+        </div>
+        <div class="weight-panel"> Waga Zwierzaka
+            <div>
+                <canvas id="animal-weight"></canvas>
+              </div>
+              <button id="add-weight-btn"> + </button>
+              <input type="number" placeholder="Waga" id="weight">
+              <input type="date" placeholder="Data" id="date">
+        </div>
+
     </div>
-    <div class="animal-panel">
-        <h2 class="animal-panel-header">Animal Panel</h2>
-        <img class="animal-panel-img" src="images/animalPanel_dog.jpeg">
+    <div class="right-panel">
+        <div class="user-name"> Imię i nazwisko</div>
+        <img class="user-img" src="images/avatar2.png">
+        <div class="animal-panel">
+            <h2 class="animal-panel-header">Kiluś</h2>
+            <div class="info-animal">
+                <img class="animal-panel-img" src="images/avatar1.png">
+                <div> Wiek: 5 lat</div>
+                <div> Waga: 8kg</div>
+            </div>
+        </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/scriptAnimalPanel.js"></script>
+    <script src="js/scriptAnimalPanelNotes.js"></script>
+    <script src="js/scriptWeightPanel.js"></script>
 
 </body>
 
