@@ -59,7 +59,7 @@ app.put('/notes/:id', async (req, res) => {
 })
 
 
-mongoose.connect('mongodb+srv://admin:12345admin@petapi.vvvlcrz.mongodb.net/Node-API?retryWrites=true&w=majority&appName=PetAPI')
+mongoose.connect()
     .then(() => {
         app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`))
 
