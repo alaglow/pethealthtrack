@@ -9,7 +9,6 @@ const listDiv = document.getElementById('todoList');
 const taskBtn = document.getElementById("task-btn")
 const inputElBtn = document.getElementById("input-el-btn")
 const inputCloseBtn = document.getElementById("input-close-btn")
-const lineTask = document.querySelector('.list-item')
 
 function taskButton() {
     taskBtn.addEventListener("click", () => {
@@ -48,8 +47,10 @@ function updateListOnPage() {
     listDiv.innerHTML = '';
 
     if (item.checked){
-        listItem.style.textDecoration = "line-through"
-    }
+        listItem.style.textDecoration = "line-through";
+        additionalNote.textDecoration = "line-through";
+    };
+
     todoListData.items.forEach((item) => {
         let listItem = document.createElement('li');
         listItem.textContent = item.text;
@@ -57,7 +58,6 @@ function updateListOnPage() {
 
         let additionalNote = document.createElement('li');
         additionalNote.textContent = item.text;
-        console.log('li male')
         shorterListToDo.appendChild(additionalNote);
     });
 }
@@ -74,9 +74,7 @@ inputElBtn.addEventListener('click', function () {
     let inpBoxValue = inputBox.value
     let newItem = new TodoListTask(inpBoxValue);
     observedItems.push(newItem);
-
 })
 
 // zrob addEventListener ktory pobiera item i robi na nim taskChecked()
 // listDiv.addEventListener('click', function (event) {
-    

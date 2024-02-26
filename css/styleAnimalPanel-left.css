@@ -11,15 +11,27 @@ body {
     background: #F8F7F7;
     font-size: 1.25rem;
 }
+.upper-panel {
+    margin-top: 2%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.top-panels {
+    margin-right: 20em;
+    margin-bottom: 20px;
+}
+
+.header-panel {
+    text-align: left;
+    margin-top: 2%;
+    margin-left: 4%;
+}
 
 .left-panel {
     background: #ADD8E5;
-    position: sticky;
-    top: 0px;
-    max-height: 100vh;
     width: 20%;
     display: grid;
-    margin-right: auto;
 }
 
 .navigation-panel-header {
@@ -86,14 +98,15 @@ body {
     bottom: calc(var(--border-radius) * -1);
     border-radius: 0 10px 0 0;
     box-shadow: 10px -10px 0 10px #F8F7F7;
-
+    border: none;
 }
 
 .nav-pan-log-out {
-    padding-left: 30%;
-    padding-top: 50%;
+    text-align: center;
+    margin-top: 50%;
     text-decoration: none;
-    border: none;
+    text-decoration: none;
+    color: #3D3C3D;
 }
 
 
@@ -111,3 +124,31 @@ body {
     margin-left: 25%;
 }
 
+
+.upper-panel {
+    display: flex;
+}
+
+.upper-header {
+    text-align: right;
+    position: fixed;
+    left: 22%;
+    font-size: 1em;
+    min-width: 1em;
+}
+
+.search-bar {
+    position: fixed;
+    right: 30%;
+}
+
+.search-input {
+    height: 30px;
+    width: 300px;
+}
+
+.user {
+    position: absolute;
+    right: 10%;
+    font-size: 0.75em;
+}

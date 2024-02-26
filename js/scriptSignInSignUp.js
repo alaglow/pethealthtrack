@@ -8,6 +8,10 @@ const animalInput = document.getElementById("animal-name");
 const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 const namePatter = /^[a-zA-Z0-9_-]{3,16}$/;
 const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const showPasswordBtn = document.getElementById("show-password-btn")
+"generate-password-btn"
+generatedPassword
+use-password-btn
 
 
 let emailSignInIcon = document.querySelector(".email-sign-in-icon");
@@ -77,5 +81,3 @@ userInput.addEventListener("keyup", () => {
 animalInput.addEventListener("keyup", () => {
     validation(animalInput, animalIcon, namePatter, animalImage, checkImage)
 })
-
-

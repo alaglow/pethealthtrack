@@ -14,6 +14,12 @@
     justify-content: center;
 }
 
+.weather-panel{
+    position: absolute;
+    left: 50%;
+    top: 10.7em;
+}
+
 .container {
     position: absolute;
     left: 21.5%;
@@ -155,6 +161,44 @@
     width: 18%;
     text-align: center;
     border-radius: 1em;
+}
+
+.calculator-popup{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.calculator-popup.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+.first-question, .second-question, .third-question, .fourth-question, .fifth-question {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+#result-text{
+    margin-top: 50%;
+}
+
+.result-here{
+    margin-top: 20%;
 }
 
 .to-do-panel-container {
@@ -392,21 +436,13 @@ height: 5vh;
 
 }
 
-.photo-panel-second {
-    position: absolute;
-    top: 21%;
-    right: 40.5%;
+.weather-panel{
     background-color: #ECECEC;
-    height: 9%;
-    width: 10%;
-    text-align: center;
-    border-radius: 1em;
-
 }
 
 .training-panel {
     position: absolute;
-    top: 33%;
+    top: 70%;
     left: 41%;
     background-color: #ECECEC;
     height: 16.5%;
@@ -418,7 +454,7 @@ height: 5vh;
 
 .supplements-panel {
     position: absolute;
-    top: 33%;
+    top: 70%;
     right: 27%;
     background-color: #ECECEC;
     height: 35.5%;
@@ -430,7 +466,7 @@ height: 5vh;
 
 .medicines-panel {
     position: absolute;
-    bottom: 31.5%;
+    bottom: 25.5%;
     left: 41%;
     background-color: #ECECEC;
     height: 16.5%;

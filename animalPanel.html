@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>
         Panel Zwierzaka
     </title>
@@ -32,7 +33,7 @@
                     <a class="nav-pan-links" href="gallery.html">GALERIA</a>
                 </li>
                 <li>
-                    <a class="nav-pan-links" href="messages.html">WIADOMOŚCI</a>
+                    <a class="nav-pan-links" href="health.html">ZDROWIE</a>
                 </li>
                 <li>
                     <a class="nav-pan-links" href="settings.html">USTAWIENIA</a>
@@ -41,10 +42,21 @@
         </nav>
         <a class="nav-pan-log-out" href="#">WYLOGUJ SIĘ</a>
     </div>
-    <div class="middle-panel">
-        <div class="welcome-header">
-            <h2 class="welcome-text">Hello, owner + pet</h2>
+    <div class="upper-panel">
+        <h3 class="upper-header">Witaj, imię właściciela i zwierzaka</h3>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Wyszukaj">
+            <i class="uil uil-search"></i>
         </div>
+        <div class="notifications">
+            <i class="uil uil-bell"></i>
+        </div>
+        <div class="user">
+            Imię i nazwisko
+        </div>
+    </div>
+    <div class="middle-panel">
+
         <div class="container">
             <div class="calendar">
                 <div class="header">
@@ -97,8 +109,7 @@
             </div>
             <button class="create-container"> + </button>
         </div>
-        <div class="diet-panel"> Dieta
-        </div>
+
         <div class="to-do-panel-container" id="to-do-panel-container">
             <button class="openBtn" id="openBtn">+</button>
             <div id="to-do-header">Lista rzeczy do zrobienia</div>
@@ -108,7 +119,7 @@
             <div class="pop-up" id="pop-up">
                 <div class="to-do-open">
                     <div id="longer-todo-header">LISTA RZECZY DO ZROBIENIA</div>
-                    <div id="todoList"  class="list-todo">
+                    <div id="todoList" class="list-todo">
 
                     </div>
                     <div class="todo-bottom-part">
@@ -127,45 +138,34 @@
 
         </div>
         <div class="mood-panel">Dzisiejszy nastrój zwierzaka
-            <button class = "moods-btn">
+            <button class="moods-btn">
                 <img class="moods-img" src="images/minka1.png">
             </button>
-            <button class = "moods-btn">
+            <button class="moods-btn">
                 <img class="moods-img" src="images/minka2.png">
             </button>
-            <button class = "moods-btn">
+            <button class="moods-btn">
                 <img class="moods-img" src="images/minka3.png">
             </button>
-            <button class = "moods-btn">
+            <button class="moods-btn">
                 <img class="moods-img" src="images/minka4.png">
             </button>
-            <button class = "moods-btn">
+            <button class="moods-btn">
                 <img class="moods-img" src="images/minka5.png">
             </button>
         </div>
         <div class="photo-panel-first"> Dodaj zdjęcie 1
         </div>
-        <div class="photo-panel-second"> Dodaj zdjęcie 2
+        <div class="weather-panel">
+            <h2> Pogoda </h2>
+            <input type="text" id="city" class="hidden" placeholder="wpisz miasto">
+            <button class="hidden" onclick="getWeather()">Wyszukaj</button>
+            <div id="temp-div"></div>
+            <div id="weather-info"></div>
+            <div id="hourly-forecast"></div>
         </div>
-        <div class="training-panel"> Spacer
-        </div>
-        <div class="supplements-panel"> Suplementy
-        </div>
-        <div class="medicines-panel"> Przyjmowane Leki
-        </div>
-        <div class="weight-panel"> Waga Zwierzaka
-            <div>
-                <canvas id="animal-weight"></canvas>
-              </div>
-              <button id="add-weight-btn"> + </button>
-              <input type="number" placeholder="Waga" id="weight">
-              <input type="date" placeholder="Data" id="date">
-        </div>
-
     </div>
     <div class="right-panel">
-        <div class="user-name"> Imię i nazwisko</div>
-        <img class="user-img" src="images/avatar2.png">
         <div class="animal-panel">
             <h2 class="animal-panel-header">Kiluś</h2>
             <div class="info-animal">
@@ -176,10 +176,14 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+        integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/scriptAnimalPanel.js"></script>
     <script src="js/scriptAnimalPanelNotes.js"></script>
     <script src="js/scriptWeightPanel.js"></script>
+    <script src="js/scriptAnimalPanelDiet.js"></script>
+    <script src="js/scriptAnimalPanelWeather.js"></script>
 
 </body>
 

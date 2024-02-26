@@ -5,6 +5,7 @@
     max-height: 100vh;
     width: 25%;
     display: grid;
+    margin-left: auto;
 }
 
 .animal-panel {
