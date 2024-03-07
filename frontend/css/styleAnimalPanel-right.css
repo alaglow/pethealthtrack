@@ -1,0 +1,23 @@
+.right-panel {
+    position: sticky;
+    top: 0px;
+    margin-left: 0;
+    max-height: 100vh;
+    width: 25%;
+    display: grid;
+    margin-left: auto;
+}
+
+.animal-panel {
+    background: #ECECEC;
+    border-radius: 30px;
+    display: flex;
+}
+
+.animal-panel-header {
+    text-align: center;
+}
+
+.animal-panel-img{
+    height: 30em;
+}

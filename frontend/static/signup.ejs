@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>
+         Rejestracja
+    </title>
+    <link rel="stylesheet" type="text/css" href="../css/styleSignInSignUp.css">
+
+</head>
+
+<body>
+
+    <div class="sign-up">
+
+        <h1>ZAREJESTRUJ SIĘ</h1>
+        <form action="/signup" method="post">
+                <div class="sign-up-input">
+                    <label for="name">LOGIN</label>
+                    <input type="text" name="username" class="name" id="name" required autocomplete="off">
+                </div>
+
+                <div class="email-input">
+                    <label for="email">E-MAIL</label>
+                    <input type="email" name="email" class="email" id="email" required autocomplete="off">
+                </div>
+
+                <div class="sign-up-input">
+                    <label for="password">HASŁO</label>
+                    <input type="password" name="password" class="password" id="password" required>
+                </div>
+
+                <div class="sign-up-input">
+                    <label for="chosenAnimal">Wybierz zwierzę</label>
+                   <select id="chosenAnimal">
+
+                   </select>
+                </div>
+                
+
+                <button type="submit" class="submit-btn">Zarejestruj</button>
+        </form>
+    </div>
+
+    <script src="../script/scriptSignInSignUp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>
+        Zaloguj się
+    </title>
+    <link rel="stylesheet" type="text/css" href="../css/styleSignInSignUp.css">
+
+</head>
+
+<body>
+
+    <div class="sign-in">
+
+        <h1>ZALOGUJ SIĘ</h1>
+        <form action="/login" method="post">
+                <div class="sign-in-input">
+                    <label for="name">LOGIN</label>
+                    <input type="text" name="username" class="name" id="name" required autocomplete="off">
+                </div>
+
+                <div class="sign-in-input">
+                    <label for="password">HASŁO</label>
+                    <input type="password" name="password" class="password" id="password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Zaloguj</button>
+        </form>
+        <p>Nie masz konta?<a href="/signup">Zarejestruj się!</a></p>
+    </div>
+
+    <script src="../script/scriptSignInSignUp.js"></script>
+</body>
+
+</html>

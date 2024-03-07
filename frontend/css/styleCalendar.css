@@ -1,0 +1,282 @@
+Resetowanie marginesów i paddingów dla list
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.calendar {
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10vh;
+}
+
+
+.calendar-header {
+  color: black;
+  padding: 15px;
+  font-size: 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+}
+
+#next,
+#prev {
+  color: black;
+}
+
+.calendar-header .month,
+.calendar-header .year {
+  font-weight: bold;
+}
+
+
+.calendar-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+}
+
+
+.weekdays {
+  display: flex;
+  text-align: center;
+}
+
+.weekday {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 1px solid black;
+
+}
+
+
+.day.other-month {
+  color: #999;
+}
+
+
+.day.selected {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: separate;
+  border-spacing: 5px 10px;
+}
+
+td,
+th {
+  position: relative;
+
+  padding-left: 20px;
+
+}
+
+td::before,
+th::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 100%;
+
+  width: 10px;
+
+  background-color: black;
+
+}
+
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 200px);
+  font-size: 5vh;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.date.inactive {
+  color: grey;
+  padding: 30px;
+}
+
+.date:hover,
+.date.active {
+  background: #a3a2a2;
+  padding: 30px;
+}
+
+.date {
+  border-collapse: separate;
+  border: 1px solid black;
+  padding: 10px 0;
+}
+
+.date-events {
+  position: absolute;
+  top: 5%;
+  left: 20vh;
+  text-align: center;
+}
+
+.event-date {
+  position: absolute;
+  left: 90vh;
+  top: 80vh;
+
+}
+
+.events {
+  position: absolute;
+  top: 80vh;
+  left: 40vh;
+  font-size: 2vh;
+}
+
+.add-event-wrapper {
+  padding: 10px;
+}
+
+.add-event-body {
+  padding: 20px;
+}
+
+.create-container {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ADD8E5;
+  border: none;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  transition: transform 0.2s;
+}
+
+.create-container:hover {
+  transform: scale(1.3);
+}
+
+
+.add-event-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.add-event-container.active {
+  opacity: 1;
+  z-index: 999;
+}
+
+.event-background {
+  border-radius: 20px;
+  background-color: #f8f7f7;
+  border: none;
+  width: 600px;
+  height: 500px;
+  padding-left: 5%;
+  padding-right: 5%
+}
+
+.title {
+  text-align: center;
+}
+
+.event-name,
+.event-time {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+}
+
+.add-btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ADD8E5;
+  border: none;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #ADD8E5;
+  border: none;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+
+#close-event-button {
+  position: relative;
+  left: 37vh;
+  bottom: 20vh;
+}
+
+.add-event-button {
+  position: relative;
+  left: 20vh;
+}
+
+.event-block {
+  position: absolute;
+  top: 20vh;
+  left: 140vh;
+  font-size: 2rem;
+  display: flex;
+}
+
+.event-name{
+  position: absolute;
+  left: 25vh;
+}
+
+.event-time{
+  position: absolute;
+  left: 40vh;
+}

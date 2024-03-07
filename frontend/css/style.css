@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+}
+
+h1 {
+    width:800px;
+    height: auto;
+    text-align: center;
+}
+
+.sign-in-btns{
+    display: flex;
+}
+
+.sign-in-btn{
+    margin-left: auto;
+}
+
+.registration-btn{
+    margin-right: auto;
+}
+
+img {
+    height: 200px;
+    display: inline-block;
+}
+
+nav {
+    margin-left: auto;
+    padding: 50px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+    text-align: center
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.text{
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+.create-profile{
+    margin: auto;
+    padding: 30px;
+}
+
+.create-profile-btn{
+    background-color: white;
+    border: none;
+    padding: 20px;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="view-transition" content="same-origin" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <title>
+        Panel Zwierzaka
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/styleAnimalPanel-left.css">
+    <link rel="stylesheet" type="text/css" href="../css/styleCalendar.css">
+
+</head>
+
+<body>
+    <div class="left-panel">
+
+        <img class="logo" src="../images/Logo.png">
+        <nav class="navigation-panel-links">
+            <ul class="ul-panel-links">
+                <li>
+                    <a class="nav-pan-links" href="animalPanel.html">PANEL GŁÓWNY</a>
+                </li>
+                <li class="active">
+                    <a class="nav-pan-links" href="calendar.html" aria-current="page">KALENDARZ</a>
+                </li>
+                <li>
+                    <a class="nav-pan-links" href="gallery.html">GALERIA</a>
+                </li>
+                <li>
+                    <a class="nav-pan-links" href="health.html">ZDROWIE</a>
+                </li>
+                <li>
+                    <a class="nav-pan-links" href="settings.html">USTAWIENIA</a>
+                </li>
+            </ul>
+        </nav>
+        <a class="nav-pan-log-out" href="#">WYLOGUJ SIĘ</a>
+    </div>
+
+    <div class="upper-panel">
+        <h3 class="upper-header">Witaj, imię właściciela i zwierzaka</h3>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Wyszukaj">
+            <i class="uil uil-search"></i>
+        </div>
+        <div class="notifications">
+            <i class="uil uil-bell"></i>
+        </div>
+        <div class="user">
+            Imię i nazwisko
+        </div>
+    </div>
+
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prev">&#10094;</button>
+            <div class="monthYear" id="monthYear"></div>
+            <button id="next">&#10095;</button>
+        </div>
+        <table>
+            <tr class="weekdays">
+                <th class="weekday">Poniedziałek</th>
+                <th class="weekday">Wtorek</th>
+                <th class="weekday">Środa</th>
+                <th class="weekday">Czwartek</th>
+                <th class="weekday">Piątek</th>
+                <th class="weekday">Sobota</th>
+                <th class="weekday">Niedziela</th>
+            </tr>
+            <tr>
+                <th class="dates" id="dates"></th>
+            </tr>
+        </table>
+
+        <div class="date-events">
+            <!-- <div class="today-date">
+                <div class="event-day"></div>
+                <div class="event-date"></div>
+            </div>
+            <div class="events">
+                <label for="event-name-par">Wydarzenie:</label>
+                <p id="event-name-par"></p>
+                <label for="event-tińme">Godzina:</label>
+                <p id="event-time-par"></p> -->
+            <button class="create-container"> + </button>
+
+        </div>
+        <div class="add-event-container">
+            <div class="event-background">
+                <div class="add-event-header">
+                    <h1 class="title">Dodaj wydarzenie</h1>
+                </div>
+                <div class="add-event-body">
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Nazwa wydarzenia" class="event-name">
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Godzina" class="event-time">
+                    </div>
+                </div>
+                <div class="add-event-button">
+                    <button class="add-btn">Dodaj</button>
+                </div>
+                <div id="close-event-button">
+                    <button class="add-btn">X</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="event-block">
+            <div class="event-name">
+                Wydarzenie:
+                <p id="event-name-par"></p>
+            </div>
+            <div class="event-time">
+                Godzina:
+                <p id="event-time-par"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../script/scriptCalendar.js"></script>
+
+</body>
+
+</html>

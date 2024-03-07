@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Zarejestruj się!
+    </title>
+    <link rel="stylesheet" type="text/css" href="../css/styleRegistrationPanel.css">
+
+</head>
+
+<body>
+    <h1 id="registration-heading"> Rejestracja</h1>
+    <form action="/signup" method="post" class="registration-form">
+        <div class="registration-background">
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Imię i nazwisko</label>
+                <input type="text" class="label-input">
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Typ zwierzaka</label>
+                <input type="radio" class="type-input" id="type-cat" name="animal-type" value="Kot">
+                <img class="animal-face-input" src="../images/cat_face.jpeg">
+                <label for="type-cat"></label>
+                <input type="radio" class="type-input" id="type-dog" name="animal-type" value="Pies">
+                <img class="animal-face-input" src="../images/dog_face.jpeg">
+                <label for="type-dog"></label>
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Imię zwierzaka</label>
+                <input type="text" class="label-input" id="animal-name" required>
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Data urodzenia zwierzaka</label>
+                <input type="date" class="label-input">
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Adopcja czy hodowla?</label>
+                <input type="radio" class="buying-input" id="adoption" name="buying-type" value="Adopcja">
+                <label for="adoption">Adopcja</label><br>
+                <input type="radio" class="buying-input" id="breeding" name="buying-type" value="Hodowla">
+                <label for="breeding">Hodowla</label><br>
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Nazwa hodowli/fundacji</label>
+                <input type="text" class="label-input">
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Data adopcji/zakupu</label>
+                <input type="date" class="label-input">
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Rasa</label>
+                <input list="options" id="wybor" class="label-input" name="wybor" placeholder="Wpisz lub wybierz opcję">
+                <!-- TODO pobrać wartości z endpointu /breeds -->
+
+            <select id="dog-breeds">
+                <option>Kundelek</option>
+            </select>
+            <select id="cat-breeds">
+                <option>Mieszaniec</option>
+            </select>
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Umaszczenie</label>
+                <input class="label-input">
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Waga</label>
+                <input type="number" class="label-input">
+            </div>
+
+            <div class="registration-input">
+                <label for="label-input" class="form-label">Numer chipu</label>
+                <input class="label-input">
+            </div>
+
+            <input type="submit" value="Zarejestruj się" class="button-input">
+        </div>
+       
+    </form>
+    <script src="../script/scriptRegistrationPanel.js"></script>
+</body>
+
+</html>
