@@ -2,9 +2,11 @@
 
 Pet Health Track is a project where you can monitor pet activity, health and diet. You can create an account and have all the infromation in one place.
 
+One of the goals of this project is to learn Javascript, React.JS, and Node.Js.
+
 The design of a website and, in the future, an application that will be dedicated to tracking the activity and health of our pet.
 
-The project consists of major tasks, and the TODO list provides an initial outline of these major tasks."
+The project consists of major tasks, and the TODO list provides an initial outline of these major tasks.
 
 
 - [x]ToDo for the calendar
@@ -12,8 +14,8 @@ The project consists of major tasks, and the TODO list provides an initial outli
 - []CSS - Website responsiveness
 - []Calendar
 - []Notes panel
-- []Account creation panel
-- []Diet panel
+- [x]Account creation panel
+- [x]Diet panel
 - []Veterinary panel 
 - []Training panel
 - []Behavior panel

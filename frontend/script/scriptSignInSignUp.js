@@ -65,7 +65,7 @@ passwordRepeatInput.addEventListener("keyup", () => {
     if (passwordSignUpInput.value === passwordRepeatInput.value) {
         passwordRepeatIcon.classList.replace(passwordImage, checkImage);
         return passwordRepeatIcon.style.color = "#4bb543";
-    } else if (passwordSignUpInput.value < 8){
+    } else if (passwordSignUpInput.value < 8) {
         passwordRepeatIcon.classList.replace(checkImage, passwordImage);
         return passwordRepeatIcon.style.color = "red";
     } else {
@@ -82,17 +82,19 @@ animalInput.addEventListener("keyup", () => {
     validation(animalInput, animalIcon, namePatter, animalImage, checkImage)
 })
 
-fetch('/breeds')
-.then(response = response.json())
-.then(data => {
-const chosenAnimal = document.getElementById("chosenAnimal");
 
-data.forEach(item => {
-    const option = document.createElement('option')
-    option.text = item.name;
-    select.add(option)
-})
-})
-.catch(error =>
-    console.log(error)
-)
+async function fetchData() {
+    try {
+        const response = await fetch('/breeds');
+        const data = await response.json();
+
+        let chosenAnimal = document.getElementById('chosenAnimal');
+        let option = document.createElement('option');
+
+
+    } catch (error) {
+        console.error('Wystąpił błąd podczas pobierania danych:', error);
+    }
+}
+
+window.onload = fetchData;

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 function connectToDb() {
-    mongoose.connect()
+    mongoose.connect('mongodb+srv://admin:12345admin@petapi.vvvlcrz.mongodb.net/Node-API?retryWrites=true&w=majority&appName=PetAPI')
         .then(() => {
             console.log('Connected to MongoDB')
         }).catch((error) => {

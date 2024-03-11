@@ -9,7 +9,7 @@ const PORT = 5030;
 
 app.use(express.json())
 
-app.get('/save-dog', async (req, res) => {
+app.get('/breeds', async (req, res) => {
     try {
         const response = await fetch('https://api.thedogapi.com/v1/breeds');
         const data = await response.json();

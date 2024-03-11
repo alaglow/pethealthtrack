@@ -1,6 +1,6 @@
 import { dogNames } from './models/dogModel.js';
 
-async function run() {
+export async function run() {
     await dogNames.deleteMany({});
     console.log("Cleared breeds collection");
     
@@ -17,6 +17,7 @@ async function run() {
     console.log("Inserted breeds");
 
     process.exit();
+
 }
 
 run();

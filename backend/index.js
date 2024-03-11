@@ -6,6 +6,7 @@ import path from "path";
 import bcrypt from "bcrypt";
 import { collection } from './models/loginModel.js';
 import { fileURLToPath } from 'url';
+import { dogNames } from './models/dogModel.js';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -76,7 +77,14 @@ app.post("/login", async (req, res) => {
     }
 })
 
-
+app.get('/breeds', (req, res) => {
+    dogNames.find({})
+        .then( data => {
+            const breedNames = data.map(item => item.name);
+            res.json(breedNames);})
+        .catch (err => {
+        res.status(500).json({ error: 'Internal Server Error' })})
+});
 
 app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
 
