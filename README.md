@@ -1,4 +1,4 @@
-# pethealthtrack
+# Pet Health Track
 
 Pet Health Track is a project where you can monitor pet activity, health and diet. You can create an account and have all the infromation in one place.
 
